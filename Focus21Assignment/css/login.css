@@ -1,0 +1,137 @@
+/*Colours*/
+@keyframes wrongPass {
+  0% {
+    -ms-transform: translateX(-1.5%);
+    -webkit-transform: translateX(-1.5%);
+    transform: translateX(-1.5%);
+    -moz-transform: translateX(-1.5%); }
+  25% {
+    -ms-transform: translateX(3%);
+    -webkit-transform: translateX(3%);
+    transform: translateX(3%);
+    -moz-transform: translateX(3%); }
+  50% {
+    -ms-transform: translateX(-3%);
+    -webkit-transform: translateX(-3%);
+    transform: translateX(-3%);
+    -moz-transform: translateX(-3%); }
+  75% {
+    -ms-transform: translateX(3%);
+    -webkit-transform: translateX(3%);
+    transform: translateX(3%);
+    -moz-transform: translateX(3%); } }
+.login {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-top: 3%; }
+
+.loginAnimate {
+  animation: wrongPass;
+  animation-duration: 0.3s; }
+
+.login--attr, .login__logo, .login--field, .login__username, .login__password, .login__submit, .login__icon, .login__help, .login__copyright, .login__jeffPic, .login__jeffName, .login__jeffEmail, .login__imagebar, .login__grid {
+  font-family: HelveticaNeue, sans-serif;
+  margin: auto;
+  display: block; }
+
+.login--field, .login__username, .login__password, .login__submit {
+  outline: none;
+  border-radius: 100px;
+  border: solid 1px #00479f;
+  width: 300px;
+  height: 55px; }
+
+.login--input, .login__username, .login__password {
+  padding-left: 50px;
+  font-size: 14px; }
+
+.login__username {
+  margin-top: 10%;
+  background: url(../assets/group-2.png) no-repeat scroll 18px 15px; }
+
+.login__password {
+  margin-top: 20px;
+  background: url(../assets/group.png) no-repeat scroll 18px 15px; }
+
+.login__submit {
+  margin-top: 30px;
+  background: #00479f;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: bold; }
+
+.login__help {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #00479f;
+  text-align: center; }
+
+.login__copyright {
+  font-size: 12px;
+  border: 0;
+  margin-top: 7%;
+  text-align: center;
+  background: #ffffff; }
+
+.login__jeffPic {
+  margin-top: 3.5%; }
+
+.login__jeffName {
+  font-size: 20px;
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1.5%; }
+
+.login__jeffEmail {
+  font-size: 18px;
+  color: #000000;
+  text-align: center; }
+
+.login__imagebar {
+  margin-top: 4.25%; }
+
+.login__menubar {
+  display: block;
+  width: 175px;
+  margin-left: auto;
+  margin-right: 0; }
+
+.login__menuicon {
+  margin-left: 15px; }
+
+.login__grid {
+  border-spacing: 20px;
+  border-collapse: separate;
+  width: 430px;
+  margin-top: 2%; }
+
+.login__cell, .login__cellBig {
+  border: solid 1px #f5f5f5;
+  width: 130px;
+  height: 130px;
+  text-align: center; }
+
+.login__cellBig {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2); }
+
+::-webkit-input-placeholder {
+  /*WebKit, Blink, Edge*/
+  color: #000000; }
+
+:-moz-placeholder {
+  /*Mozilla Firefox 4 to 18*/
+  color: #000000;
+  opacity: 1; }
+
+::-moz-placeholder {
+  /*Mozilla Firefox 19+*/
+  color: #000000;
+  opacity: 1; }
+
+:-ms-input-placeholder {
+  /*Internet Explorer 10-11*/
+  color: #000000; }
+
+/*# sourceMappingURL=login.css.map */

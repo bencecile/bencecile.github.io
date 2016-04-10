@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Sample Login</title>
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        
+        <!-- The main CSS -->
+        <link href="css/login.css" rel="stylesheet">
+        
+        <!-- React.js required libraries -->
+        <script src="js/react.js"></script>
+        <script src="js/react-dom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    </head>
+    <body>
+        <div id="login"></div>
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.js"></script>
+        
+        <!-- My JS functions -->
+        <script type="text/babel">
+            var LoginLogo = React.createClass({
+                render: function () {
+                    return(
+                        <img className="login__logo" src="assets/washington-department-of-health.png"/>
+                    );
+                }
+            });
+            
+            var LoginUsername = React.createClass({
+                switchLogin: function (event) {
+                    var username = document.getElementById("login__username");
+                    //Check if the entered username is correct
+                    if (username.value == "jeff_aramini@ihealthsolutions.net") {
+                        //Switch to the new login page
+                        ReactDOM.render(
+                            <LoginPage2 />,
+                            document.getElementById("login")
+                        );
+                        
+                        //Change the text on the submit button
+                        document.getElementById("login__submit").value = "SIGN IN";
+                        
+                        document.getElementById("login__copyright").style = "margin-top: 1.5%"
+                        
+                        document.getElementById("login__password").focus()
+                    }
+                },
+                render: function () {
+                    return(
+                        <input className="login__username" id="login__username" type="text" name="email" placeholder="EMAIL" onBlur={this.switchLogin}/>
+                    );
+                }
+            });
+            
+            var LoginPassword = React.createClass ({
+                render: function () {
+                    return (
+                        <input className="login__password" id="login__password" type="password" name="password" placeholder="PASSWORD"/>
+                    );
+                }
+            });
+                
+            var LoginSubmit = React.createClass ({
+                login: function (event) {
+                    event.preventDefault();
+                    try {
+                        var username = document.getElementById("login__username").value;
+                    } catch (e) {
+                        username = false;
+                    } finally {
+                        var password = document.getElementById("login__password").value;
+                    }
+                    if (!username && password == "1234") {
+                        //Go to the logged in page
+                        ReactDOM.render(
+                            <LoginPage3 />,
+                            document.getElementById("login")
+                        );
+                        
+                        //Change the margins of the copyright and the login div
+                        document.getElementsByClassName("login")[0].style = "margin-top: 0.5%";
+                        document.getElementById("login__copyright").style = "margin-top: 2.5%";
+                    } else {
+                        //Play the shake animation
+                        var login = document.getElementsByClassName("login")[0];
+                        login.addEventListener("webkitAnimationEnd", 
+                            function () {
+                                document.getElementsByClassName("login")[0].classList.remove("loginAnimate");
+                            }
+                        );
+                        login.addEventListener("animationend", 
+                            function () {
+                                document.getElementsByClassName("login")[0].classList.remove("loginAnimate");
+                            }
+                        );
+                        login.classList.add("loginAnimate");
+                        document.getElementById("login__password").value = "";
+                    }
+                },
+                render: function () {
+                    return (
+                        <input className="login__submit" id="login__submit" type="submit" value="NEXT" onClick={this.login}/>
+                    );
+                }
+            });
+            
+            var LoginHelp = React.createClass ({
+                render: function () {
+                    return (
+                        <p className="login__help">Need help?</p>
+                    );
+                }
+            });
+                
+            var LoginCopyright = React.createClass ({
+                render: function () {
+                    return (
+                        <pre className="login__copyright" id="login__copyright">©   Scientific Technologies Corporation 2016</pre>
+                    );
+                }
+            });
+            
+            var LoginForm1 = React.createClass ({
+                render: function () {
+                    return (
+                        <form id="login__form" autocomplete="on">
+                            <LoginUsername />
+                            <LoginPassword />
+                            <LoginSubmit />
+                            <LoginHelp />
+                        </form>
+                    );
+                }
+            });
+            
+            var LoginPage1 = React.createClass ({
+                render: function () {
+                    return (
+                    <div className="login">
+                        <LoginLogo />
+                        <LoginForm1 />
+                        <LoginCopyright />
+                    </div>
+                    );
+                }
+            });
+            
+            var LoginDetails = React.createClass ({
+                render: function () {
+                    return (
+                        <div className="login__usernameDetails">
+                            <img className="login__jeffPic" src="assets/jeff-pic.png"/>
+                            <p className="login__jeffName">Jeffery Aramini</p>
+                            <p className="login__jeffEmail">jeff_aramini@ihealthsolutions</p>
+                        </div>
+                    );
+                }
+            });
+            
+            var LoginImageBar = React.createClass ({
+                render: function () {
+                    return (
+                        <img className="login__imagebar" src="assets/logo-thumbnail.png"/>
+                    );
+                }
+            });
+            
+            var LoginForm2 = React.createClass ({
+                render: function () {
+                    return (
+                        <form id="login__form" autocomplete="on">
+                            <LoginDetails />
+                            <LoginPassword />
+                            <LoginSubmit />
+                            <LoginHelp />
+                        </form>
+                    );
+                }
+            });
+            
+            var LoginPage2 = React.createClass ({
+                render: function () {
+                    return (
+                        <div className="login">
+                            <LoginLogo />
+                            <LoginForm2 />
+                            <LoginImageBar />
+                            <LoginCopyright />
+                        </div>
+                    );
+                }
+            });
+            
+            var LoginMenubar = React.createClass ({
+                render: function () {
+                    return (
+                        <div className="login__menubar">
+                            <img className="login__menuicon" src="assets/help.png"/>
+                            <img className="login__menuicon" src="assets/notifications.png"/>
+                            <img className="login__menuicon" src="assets/apps.png"/>
+                            <img className="login__menuicon" src="assets/jeff-copy.png"/>
+                        </div>
+                    );
+                }
+            });
+            
+            var LoginGrid = React.createClass ({
+                render: function () {
+                    return (
+                        <table className="login__grid">
+                            <tbody>
+                                <tr>
+                                    <td className="login__cellBig"><img src="assets/grid-1.png"/></td>
+                                    <td className="login__cell"><img src="assets/grid-2.png"/></td>
+                                    <td className="login__cell"><img src="assets/grid-3.png"/></td>
+                                </tr>
+                                <tr>
+                                    <td className="login__cell"><img src="assets/grid-4.png"/></td>
+                                    <td className="login__cell"><img src="assets/grid-5.png"/></td>
+                                    <td className="login__cell"><img src="assets/grid-6.png"/></td>
+                                </tr>
+                                <tr>
+                                    <td className="login__cell"><img src="assets/grid-7.png"/></td>
+                                    <td className="login__cell"><img src="assets/grid-8.png"/></td>
+                                    <td className="login__cell"><img src="assets/grid-9.png"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    );
+                }
+            });
+            
+            var LoginPage3 = React.createClass ({
+                render: function () {
+                    return (
+                        <div className="login">
+                            <LoginMenubar />
+                            <LoginLogo />
+                            <LoginGrid />
+                            <LoginCopyright />
+                        </div>
+                    );
+                }
+            });
+            
+            //Create the new elements that replace the username login field
+            ReactDOM.render(
+                <LoginPage1 />,
+                document.getElementById("login")
+            );
+        </script>
+        
+    </body>
+</html>
