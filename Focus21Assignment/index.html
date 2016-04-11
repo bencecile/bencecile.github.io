@@ -40,7 +40,7 @@
                 switchLogin: function (event) {
                     var username = document.getElementById("login__username");
                     //Check if the entered username is correct
-                    if (username.value == "jeff_aramini@ihealthsolutions.net") {
+                    if (username.value.toLowerCase() == "jeff_aramini@ihealthsolutions.net") {
                         //Switch to the new login page
                         ReactDOM.render(
                             <LoginPage2 />,
