@@ -41,6 +41,7 @@
                     var username = document.getElementById("login__username");
                     //Check if the entered username is correct
                     if (username.value.toLowerCase() == "jeff_aramini@ihealthsolutions.net") {
+                        var curPass = document.getElementById("login__password").value;
                         //Switch to the new login page
                         ReactDOM.render(
                             <LoginPage2 />,
@@ -50,9 +51,10 @@
                         //Change the text on the submit button
                         document.getElementById("login__submit").value = "SIGN IN";
                         
-                        document.getElementById("login__copyright").style = "margin-top: 1.5%"
+                        document.getElementById("login__copyright").style = "margin-top: 1.5%";
                         
-                        document.getElementById("login__password").focus()
+                        document.getElementById("login__password").focus();
+                        document.getElemenyById("login__password").value = curPass;
                     }
                 },
                 render: function () {
