@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Benjamin Cecile</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+                integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+                crossorigin="anonymous">
+        <!-- Load my own css file for custom appearance -->
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-static-top"
+             onclick="checkNavigation(event)">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed"
+                            data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">My Co-op Experience</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li id="sf16Nav">
+                            <a href="#SF16">Summer/Fall 2016</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div id="mainPage">
+                <h1 id="aboutMe">About Me</h1>
+                <p id="aboutMeContent">
+                    My name is Benjamin Cecile and I am a student at the
+                    University of Guelph. I started my Software Engineering
+                    degree in Fall 2014. My degree is part of a Co-op program
+                    that allows me to work some semesters and go to school those
+                    other semesters.
+                    <br>
+                    This website will show you the co-op experience that I have
+                    gained during my academic career.
+                </p>
+            </div>
+            <div id="sf16">
+                <h1 id="ricoh">Ricoh Canada Inc.</h1>
+                <p id="ricohContent">
+                    Ricoh is a multi-national corporation that originated in
+                    Japan. They produce
+                    printers, mutli-functional printers (MFP) and some cameras.
+                    The MFPs are Ricoh's main product so a lot of their
+                    development goes towards making them better. MFPs can scan,
+                    copy and print as their main functions, and recently there
+                    is a touch device on the front to control the MFP. This
+                    touch device is an Android device called a Smart Operation
+                    Panel (SOP). The SOP is the same for every MFP.
+                    <br>
+                    <br>
+                    Ricoh Canada is a branch of Ricoh that operates in Canada.
+                    I worked at the Kitchener, Ontario office as part of the
+                    software development division.
+                </p>
+                <h1 id="ricohJob">Job Description</h1>
+                <p id="ricohJobContent">
+                    My job was, for the vast majority of time, to develop apps
+                    that would run on SOPs. This was Android development and
+                    since all of the panels are the same, it was unified at API
+                    level 17.
+                    <br>
+                    Going into this job, I had less than a year of Java
+                    experience and zero Android experience. I had to learn
+                    everything that I needed to know on my own time, so I taught
+                    myself Android development.
+                    <br>
+                    For the first couple months I worked on free apps that
+                    customers could download from the SOP app store. They all
+                    augmented the way that a user could interact with the
+                    panels. For example, instead of doing a plain copy, one of our apps would
+                    copy with a watermark.
+                    <br>
+                    <br>
+                    The biggest application that I helped develop was called Common Authentication
+                    Card version 4 (CAC4). The idea was that you could use a special kind of card
+                    (CAC) to login to an MFP and scan documents to a secure shared-filesystem
+                    or email the documents. The emailed documents could be encrypted and/or have
+                    a signature to verify the authenticity of the documents.
+                    <br>
+                    There was a previous version of CAC that ran on theJava-only side of the MFP,
+                    but now a customer wanted to update CAC to run it onthis new kind of MFP with an
+                    SOP. There were some parts of the old code that wecould re-use but for the most
+                    part it was a re-engineering effort.
+                    <br>
+                    This was a paid application so it had to have high quality code and go through
+                    the proper phases of testing before it could be released.
+                </p>
+                <h1 id="ricohGoals">Goals</h1>
+                <p id="ricohGoalsContent">
+                    Since I didn't have any Android experience going into this Co-op term, one of my
+                    biggest goals was to learn Android development. Since this was the main focus
+                    of my work, I learned the basics of Android quickly but I was still learning new
+                    things about Android near the very end of my 8 months.
+                    <br>
+                    I had only very little experience with networking, so one of my other goals was
+                    to learn more about networking. I definitely got my foot in the water with a
+                    servlet that CAC4 used to allow the user to perform various operations such as,
+                    modifying settings or uploading a background that would be shown on the SOP.
+                </p>
+                <h1 id="ricohSummary">Summary</h1>
+                <p id="ricohSummaryContent">
+                    I learned a lot of software development practices in this Co-op term with Ricoh.
+                    I also definitely improved my ability to develop software with the following
+                    largest contributing factors:
+                    <br>
+                    &bull; Working with Android and Java nearly everyday
+                    <br>
+                    &bull; Using the Agile methodology in the development of CAC4
+                    <br>
+                    &bull; Using Checkstyle, Findbugs and other similar tools to improve my code
+                    quality
+                    <br>
+                    &bull; Helping co-workers solve problems that they were stuck on and vice-versa
+                    <br>
+                    <br>
+                    All in all, my placement at Ricoh was very successful and I enjoyed working
+                    there as my first real Software Development job.
+                </p>
+            </div>
+        </div>
+        <!-- Put these last so that the page will load faster -->
+        <!-- JQuery. We need to load this first for Bootstrap to work -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+                crossorigin="anonymous"></script>
+        <!-- Load my own javascript file for custom functionality -->
+        <script src="./js.js"></script>
+    </body>
+</html>
