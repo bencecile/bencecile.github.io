@@ -1,0 +1,14 @@
+.input {
+    display: inline-block;
+}
+
+.inputField {
+    margin: 2% auto;
+    display: block;
+    text-align: center;
+}
+
+.star {
+    display: inline-block;
+    border: solid 1px black;
+}

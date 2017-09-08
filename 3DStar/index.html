@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>3D Star</title>
+        
+        <!-- Angular library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+        
+        <!-- Sytle Sheet -->
+        <link href="css/main.css" rel="stylesheet"/>
+        
+        <script src="js/main.js"></script>
+    </head>
+    <body ng-app="star" ng-controller="starCont as starCont">
+        <div class="input">
+            <div class="inputField">
+                The number of points on the star:
+                <input type="number" ng-model="starCont.numPoints" min="3" required>
+            </div>
+            <div class="inputField">
+                The radius of the star in pixels:
+                <input type="number" ng-model="starCont.radius" min="30" required>
+            </div>
+            <div class="inputField">
+                The colour of the star:
+                <input type="color" ng-model="starCont.colour" required>
+            </div>
+            <button class="inputField" ng-click="starCont.makeStar()">Create</button>
+        </div>
+        <div class="star">
+            <canvas id="starCanvas"></canvas>
+        </div>
+    </body>
+</html>
