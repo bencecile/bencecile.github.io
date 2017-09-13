@@ -6,31 +6,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Benjamin Cecile</title>
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-                integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-                crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+            integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+            crossorigin="anonymous">
         <!-- Load my own css file for custom appearance -->
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <nav class="navbar navbar-default navbar-static-top"
-             onclick="checkNavigation(event)">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed"
-                            data-toggle="collapse" data-target="#navbar"
-                            aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">My Co-op Experience</a>
-                </div>
+        <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top"
+        onclick="checkNavigation(event)">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Co-op Experience</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li id="sf16Nav">
-                            <a href="#SF16">Summer/Fall 2016</a>
+                    <ul class="navbar-nav">
+                        <li class="nav-item" id="sf16Nav">
+                            <a class="nav-link" href="#SF16">Summer/Fall 2016</a>
+                        </li>
+                        <li class="nav-item" id="s17Nav">
+                            <a class="nav-link" href="#S17">Summer 2017</a>
                         </li>
                     </ul>
                 </div>
@@ -143,14 +142,64 @@
                     there as my first real Software Development job.
                 </p>
             </div>
+            <div id="s17">
+                <h1 id="intrigue">Intrigue Media</h1>
+                <p id="intrigueContent">
+                    Intrigue Media is a company that started in Guelph not too long ago, and it's only recently that they have become a big presence in the online marketing industry.
+                    <br>
+                    In particular, they do advertising for local businesses that have minimal or no online presence. Given the nature of the work, all of the work that gets done for clients is chunked and broken up between team members, based on their role in the company. To facilitate this work split, each team member is given tasks that need to be done, as action items, and their time is tracked for the amount of work needed to complete the task. This team is called the Operations Team.
+                    <br>
+                    There is also a sales team team that handles direct communication and negotiation with clients. This team also had action items for the client that they worked with.
+                </p>
+                <h1 id="intrigueJob">Job Description</h1>
+                <p id="intrigueJobContent">
+                    My time at Intrigue was essentially into two distinct parts. The first part was working on a classic PHP served website, and the second was to work on a game that ran on Node.js.
+                    <br>
+                    <br>
+                    The first part was not to work directly with clients, or client work, but to make the lives of Operations Team easier. By the time I came along, Intrigue Media had only had a software development team for about a year. At the start of my time, there was a website that existed for the Operations Team to use to keep track of their action items. I enhanced this website, adding functionality that got hooked up to an external API server. These enhancements were mainly to replace old functionality that had lived in a Google Sheet. Some of these were to include a login for each team member, track how much work each team member can perform each month, or do an analysis on action items for either team members or clients and get useful metrics. The website was served with a PHP server and HTML, CSS and JS to give the team members a good view.
+                    <br>
+                    <br>
+                    The second part was to work on a Trivia Game to get the community engaged. Like the first website, the Game was already in the middle of development. The Game is run on a Node.js server and each user can connect to the game to access the same question. First, I focused on improving the gameplay for the users. One improvement was that the Game needed to be synced across everyone currently playing it and WebSockets were used to obtain that requirement. This second part was very different because the most of my work had to be done on the server-side rather on the client-side, which took a different mindset to solve the problems.
+                </p>
+                <h1 id="intrigueGoals">Goals</h1>
+                <p id="intrigueGoalsContent">
+                    Going into this co-op, I had two major programming goals: get experience with web front-end and web back-end. I also made a goal to get better at explaining technical issues to non-technical people.
+                    <br>
+                    <br>
+                    These goals matched up nicely with my co-op term. As the first part was mostly doing website development for the Intrigue team, I got a lot of experience developing web front-end. Starting this co-op term, I had very little experience with anything web related. Now, I have essential experience for web front-end development.
+                    <br>
+                    <br>
+                    With working on the Trivia Game for my second part at Intrigue, I was able to work towards my goal of getting more experience with servers. Node.js seems like it was a good first step in learning web back-ends, as it gave me knowledge of the general server workflow. However, it is also different from traditional server technologies like PHP because of Node's asynchronous nature.
+                    <br>
+                    <br>
+                    When I worked at Intrigue, the development team was very small in comparison to the rest of the company. Not everyone there was technologically savvy, so it gave me a good chance to explain technical issues.
+                </p>
+                <h1 id="intrigueSummary">Summary</h1>
+                <p id="intrigueSummaryContent">
+                    Although I'd been through three years of school and an 8 month co-op work term, I still hadn't had very much experience with web technologies. That's why I wanted a co-op job where I could get experience with web technologies. Intrigue Media aligned very well with what I wanted to do.
+                    <br>
+                    During my co-op with Intrigue, I worked on:
+                    <br>
+                    &bull; A website to help everyone at Intrigue do their work more efficiently
+                    <br>
+                    &bull; A Trivia Game to engage the community
+                    <br>
+                    <br>
+                    These were great projects to work on that gave me experience with the entire full-stack workflow. I'm very certain that I learned applicable skills that I can use for anything web related.
+                </p>
+            </div>
         </div>
         <!-- Put these last so that the page will load faster -->
         <!-- JQuery. We need to load this first for Bootstrap to work -->
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-        <!-- Bootstrap JS -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-                crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+            integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+            integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+            crossorigin="anonymous"></script>
         <!-- Load my own javascript file for custom functionality -->
         <script src="./js.js"></script>
     </body>

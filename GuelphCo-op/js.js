@@ -5,6 +5,12 @@ const URL_LOOKUP = [
         navId: "#sf16Nav",
         id: "#sf16",
         pageName: "SF16"
+    },
+    {
+        url: "#S17",
+        navId: "#s17Nav",
+        id: "#s17",
+        pageName: "S17"
     }
 ];
 
@@ -50,13 +56,13 @@ function checkNavigation(event) {
 //Look up the associated content page id to the header id
 //These must be in the same order that they appear on the page
 const HEADER_LOOKUP = {
-    "mainPage": [
+    mainPage: [
         {
             header: "aboutMe",
             content: "#aboutMeContent"
         }
     ],
-    "SF16": [
+    SF16: [
         {
             header: "ricoh",
             content: "#ricohContent"
@@ -73,28 +79,38 @@ const HEADER_LOOKUP = {
             header: "ricohSummary",
             content: "#ricohSummaryContent"
         }
+    ],
+    S17: [
+        {
+            header: "intrigue",
+            content: "#intrigueContent"
+        },
+        {
+            header: "intrigueGoals",
+            content: "#intrigueGoalsContent"
+        },
+        {
+            header: "intrigueJob",
+            content: "#intrigueJobContent"
+        },
+        {
+            header: "intrigueSummary",
+            content: "#intrigueSummaryContent"
+        }
     ]
 };
 
-//The lock for when it is OK to do a header mouse over
-var headerLock = false;
-
 //Show the content corresponding to the header
-function headerMouseOver(event) {
-    if (headerLock) {
-        return;
-    }
-    //Lock this event
-    headerLock = true;
+function headerShow(event) {
     for (i of HEADER_LOOKUP[currentPage]) {
+        var element = $(i.content)[0];
         if (event.target.id === i.header) {
-            $(i.content)[0].hidden = false;
+            //Be able to toggle the header that is clicked on
+            element.hidden = !element.hidden;
         } else {
-            $(i.content)[0].hidden = true;
+            element.hidden = true;
         }
     }
-    //Start the timeout for unlocking this event
-    setTimeout(() => headerLock = false, 50);
 }
 
 //Hide all of the other content than the first one
@@ -117,7 +133,10 @@ $(function() {
     checkNavigation();
 
     //Apply the mouse over change event to every header
-    for (i of $("h1")) {
-        i.addEventListener("mouseenter", headerMouseOver);
-    }
+    $("h1").each((i, value) => {
+        $(value).on("click", headerShow);
+    });
+    // for (i of $("h1")) {
+    //     i.addEventListener("mouseclick", headerShow);
+    // }
 });

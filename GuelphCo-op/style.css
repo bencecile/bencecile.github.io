@@ -1,3 +1,8 @@
+
+body {
+    margin-top: 60px;
+}
+
 p {
     font-size: 1.5em;
 }
@@ -7,4 +12,9 @@ h1 {
     border-radius: 5px;
     background-color: #eee;
     padding: 10px;
+}
+
+h1:hover {
+    background-color: #444;
+    color: #eee;
 }
