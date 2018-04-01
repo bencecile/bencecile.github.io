@@ -4,13 +4,18 @@ const URL_LOOKUP = [
         url: "#SF16",
         navId: "#sf16Nav",
         id: "#sf16",
-        pageName: "SF16"
+        pageName: "SF16",
     },
     {
         url: "#S17",
         navId: "#s17Nav",
         id: "#s17",
-        pageName: "S17"
+        pageName: "S17",
+    }, {
+        url: "#W18",
+        navId: "#w18Nav",
+        id: "#w18",
+        pageName: "W18",
     }
 ];
 
@@ -96,6 +101,24 @@ const HEADER_LOOKUP = {
         {
             header: "intrigueSummary",
             content: "#intrigueSummaryContent"
+        }
+    ],
+    W18: [
+        {
+            header: "jibestream",
+            content: "#jibestreamContent"
+        },
+        {
+            header: "jibestreamGoals",
+            content: "#jibestreamGoalsContent"
+        },
+        {
+            header: "jibestreamJob",
+            content: "#jibestreamJobContent"
+        },
+        {
+            header: "jibestreamSummary",
+            content: "#jibestreamSummaryContent"
         }
     ]
 };
