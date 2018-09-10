@@ -34,6 +34,9 @@
                         <li class="nav-item" id="w18Nav">
                             <a class="nav-link" href="#W18">Winter 2018</a>
                         </li>
+                        <li class="nav-item" id="s18Nav">
+                            <a class="nav-link" href="#S18">Summer 2018</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -222,6 +225,48 @@
                 <h1 id="jibestreamSummary">Summary</h1>
                 <p id="jibestreamSummaryContent">
                     Overall, Jibestream was a good company to work at, although my stay did get cut unexpectedly short. My biggest takeaway from my time there was the development in React because that can be applied to any kind of web development, as long as they are using React as the framework of choice. I did learn the fundamentals of indoor mapping, which may come in handy later.
+                </p>
+            </div>
+            <div id="s18">
+                <h1 id="ricoh2">Ricoh Canada Inc.</h1>
+                <p id="ricoh2Content">
+                    I worked for Ricoh during my very first Co-op, but this time I worked on very different projects. As a recap, Ricoh is a multi-national corporation that originated in Japan. One of their software products is a system that can manage a vast amount of printers. This system would be employed by any company that needs to control those printer devices, either in a single location or spread across several facilities. This system is called Streamline NX (henceforth known as SLNX). SLNX is written in Java, and I was able to leverage some of the libraries written for it with the projects that I worked on.
+                </p>
+                <h1 id="ricoh2Job">Job Description</h1>
+                <p id="ricoh2JobContent">
+                    The first project that I worked on as a part of my job, was to create an automated testing system for SLNX. The idea behind this was that there wasn't any kind of testing to easily check for regressions with each update to SLNX. With this final goal in mind, I first needed to understand this complex system. After I had a basic grasp of SLNX, I started to build the framework for the testing system, in Java. The biggest difficulty with this project was trying to figure out all of the components that would be required. To combat this, I was given a couple basic tests to start writing. SLNX has to keep track of users, so my first test was to use the established REST interface to add a new user. My second test was to use the basic print submission flow to submit a print job, checking for any possible failures along the way.
+                    <br>
+                    <br>
+                    During my time at Ricoh this summer, I also worked on a second project. Somewhat similar to the testing automation, this project was a health check for one of the servers that is a part of SLNX. The main responsibility of this server is to be a local contact point for printers in a single location, which is why it is called the Delegation Server. There is also another server called the Core Server, which is the main store of information. There is only ever a single Core Server in a deployment, but there may or may not be more than one Delegation Server. The purpose of my Health Check was to make sure that the main workflow for print job submission is functioning, which would give you a better clue of that actual state of a Delegation Server than, say, a ping service. This health check was a command line program, also written in Java so that it could take advantage of the previously written libraries for SLNX.
+                </p>
+                <h1 id="ricoh2Goals">Goals</h1>
+                <p id="ricoh2GoalsContent">
+                    Since I only had slightly fewer than 6 months for this Co-op, I knew that I wouldn't be able to "finish" the test automation project, as it is a massive undertaking. A big part would be to leave a manageable project behind for anybody else who would need to work on it. And to make any kind of project manageable, you need to take good notes and keep it organized, which ties into a couple of my goals.
+                    <br>
+                    <br>
+                    &#x2022;Improve my design and implementation skills
+                    <br>
+                    &#x2022;Improve my documentation skills
+                    <br>
+                    &#x2022;Understand and implement automation testing
+                    <br>
+                    <br>
+                    The testing automation project absolutely helped my design and implementation skills as I had to be conscious of my decisions because they would be left to, at least, the next developer that works on this project. However, good design usually can't be attained without any implementation whatsoever, so it really helped that I had a good feedback loop when I was implementing those test cases.
+                    <br>
+                    <br>
+                    In addition to generally commenting the code that I wrote, writing any additional documentation was critical. Since the automation testing may require other components to be set up, such as a virtual machine, this setup must be documented in a way that is easy for someone else to follow.
+                    <br>
+                    <br>
+                    Actually implementing automation testing really helped me get a good grasp on the concept. There are a lot of things that need to thought about such as how the testing is set up and torn down. A good automation test, ideally, shouldn't leave any trace that it was run, and it shouldn't require any human intervention for it to run, so it needs to make sure the testing environment is estabished by itself.
+                </p>
+                <h1 id="ricoh2Summary">Summary</h1>
+                <p id="ricoh2SummaryContent">
+                    My last co-op was very valuable to me. I hadn't had any experience with automated testing before, but this work term really made me dive head first into it. I can imagine automated testing being very valuable to many different companies in my future.
+                    <br>
+                    Improving my communication skills will always continue to help me, pretty much no matter what kind of career path I choose to pursue.
+                    <br>
+                    <br>
+                    Although I may not be able to reuse the code that I wrote in Java, the concepts that I gained while working for Ricoh will stick with me forever.
                 </p>
             </div>
         </div>

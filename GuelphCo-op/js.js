@@ -1,23 +1,25 @@
 //These objects will lookup the element ids based on the url
-const URL_LOOKUP = [
-    {
-        url: "#SF16",
-        navId: "#sf16Nav",
-        id: "#sf16",
-        pageName: "SF16",
-    },
-    {
-        url: "#S17",
-        navId: "#s17Nav",
-        id: "#s17",
-        pageName: "S17",
-    }, {
-        url: "#W18",
-        navId: "#w18Nav",
-        id: "#w18",
-        pageName: "W18",
-    }
-];
+const URL_LOOKUP = [{
+    url: "#SF16",
+    navId: "#sf16Nav",
+    id: "#sf16",
+    pageName: "SF16",
+}, {
+    url: "#S17",
+    navId: "#s17Nav",
+    id: "#s17",
+    pageName: "S17",
+}, {
+    url: "#W18",
+    navId: "#w18Nav",
+    id: "#w18",
+    pageName: "W18",
+}, {
+    url: "#S18",
+    navId: "#s18Nav",
+    id: "#s18",
+    pageName: "S18",
+}];
 
 //This is the current page that is being shown
 var currentPage = "mainPage";
@@ -61,66 +63,62 @@ function checkNavigation(event) {
 //Look up the associated content page id to the header id
 //These must be in the same order that they appear on the page
 const HEADER_LOOKUP = {
-    mainPage: [
-        {
-            header: "aboutMe",
-            content: "#aboutMeContent"
-        }
-    ],
-    SF16: [
-        {
-            header: "ricoh",
-            content: "#ricohContent"
-        },
-        {
-            header: "ricohGoals",
-            content: "#ricohGoalsContent"
-        },
-        {
-            header: "ricohJob",
-            content: "#ricohJobContent"
-        },
-        {
-            header: "ricohSummary",
-            content: "#ricohSummaryContent"
-        }
-    ],
-    S17: [
-        {
-            header: "intrigue",
-            content: "#intrigueContent"
-        },
-        {
-            header: "intrigueGoals",
-            content: "#intrigueGoalsContent"
-        },
-        {
-            header: "intrigueJob",
-            content: "#intrigueJobContent"
-        },
-        {
-            header: "intrigueSummary",
-            content: "#intrigueSummaryContent"
-        }
-    ],
-    W18: [
-        {
-            header: "jibestream",
-            content: "#jibestreamContent"
-        },
-        {
-            header: "jibestreamGoals",
-            content: "#jibestreamGoalsContent"
-        },
-        {
-            header: "jibestreamJob",
-            content: "#jibestreamJobContent"
-        },
-        {
-            header: "jibestreamSummary",
-            content: "#jibestreamSummaryContent"
-        }
-    ]
+    mainPage: [{
+        header: "aboutMe",
+        content: "#aboutMeContent"
+    }],
+    SF16: [{
+        header: "ricoh",
+        content: "#ricohContent"
+    }, {
+        header: "ricohGoals",
+        content: "#ricohGoalsContent"
+    }, {
+        header: "ricohJob",
+        content: "#ricohJobContent"
+    }, {
+        header: "ricohSummary",
+        content: "#ricohSummaryContent"
+    }],
+    S17: [{
+        header: "intrigue",
+        content: "#intrigueContent"
+    }, {
+        header: "intrigueGoals",
+        content: "#intrigueGoalsContent"
+    }, {
+        header: "intrigueJob",
+        content: "#intrigueJobContent"
+    }, {
+        header: "intrigueSummary",
+        content: "#intrigueSummaryContent"
+    }],
+    W18: [{
+        header: "jibestream",
+        content: "#jibestreamContent"
+    }, {
+        header: "jibestreamGoals",
+        content: "#jibestreamGoalsContent"
+    }, {
+        header: "jibestreamJob",
+        content: "#jibestreamJobContent"
+    }, {
+        header: "jibestreamSummary",
+        content: "#jibestreamSummaryContent"
+    }],
+    S18: [{
+        header: "ricoh2",
+        content: "#ricoh2Content"
+    }, {
+        header: "ricoh2Goals",
+        content: "#ricoh2GoalsContent"
+    }, {
+        header: "ricoh2Job",
+        content: "#ricoh2JobContent"
+    }, {
+        header: "ricoh2Summary",
+        content: "#ricoh2SummaryContent"
+    }],
 };
 
 //Show the content corresponding to the header
